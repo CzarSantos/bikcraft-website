@@ -184,3 +184,28 @@ p {
 .call p {
   margin-bottom: 20px;
 }
+
+/* Portifílo------------------------------------------- */
+
+.portifolio {
+  width: 100%;
+  background: #000;
+  padding: 40px 0;
+}
+
+.portifolio .subtitulo {
+  color: #fec63e;
+}
+
+.portifolio .subtitulo::after {
+  background: #fec63e;
+}
+
+.portifolio_lista li:last-child {
+  /* seleciona o ultimo item da lista */
+  margin-top: 20px;
+}
+
+.portifolio .call p {
+  color: #fff;
+}
