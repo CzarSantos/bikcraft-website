@@ -393,3 +393,75 @@ img {
   background: #fec63e;
   padding: 20px 0;
 }
+
+/* Javascript - Habilita estilo apenas se exixtir o JS */
+/* Estilo dos elementos */
+.js [data-slide] {
+  position: relative;
+}
+
+.js [data-slide] > * {
+  position: absolute;
+  top: 0px;
+  opacity: 0;
+}
+
+.js [data-slide] > .active {
+  position: relative;
+  opacity: 1;
+  transition: opacity 3s; /* Opacidade vai de 0 p/ 1 */
+  z-index: 1;
+}
+
+/* Botões de navegação */
+.js [data-slide-nav] {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.js [data-slide-nav] button {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 4px;
+  border: none;
+  padding: 0;
+  border-radius: 6px;
+  text-indent: -99px; /* exibe numeros em uma posição a -99px */
+  overflow: hidden; /* não exibe nada de fora */
+  background: #1d1d1d;
+}
+
+/* Qual está enm exibição no momento | Ativa */
+.js [data-slide-nav] button.active {
+  background: #fec63e;
+}
+
+/* Animação------------------------------------------ */
+
+/* estilo da classe */
+.js [data-anime] {
+  opacity: 0;
+}
+
+/* Classes especificas para animações */
+.js .fadeDown {
+  transform: translate3d(0, -20px, 0);
+}
+.js .fadeInUp {
+  transform: translate3d(0, 20px, 0);
+}
+.js .fadeInRight {
+  transform: translate3d(20px, 0, 0);
+}
+.js .fadeInLeft {
+  transform: translate3d(-20px, 0, 0);
+}
+
+/* Quando a classe anime for adicionada */
+.js .anime {
+  opacity: 1;
+  transform: none;
+  transition: opacity 800ms, transform 800ms;
+}

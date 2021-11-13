@@ -11,7 +11,8 @@
 	<link rel="stylesheet" href="css/grid.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/responsivo.css">
-
+	<!-- Habilitar JS | adiciona classe ao elemento -->
+	<script>document.documentElement.classList.add("js");</script>
 </head>
 
 <body>
@@ -38,19 +39,19 @@
 	<!-- Seção Intro -->
 	<section class="introducao">
 		<div class="container">
-			<h1>Bicicletas Feitas a Mão</h1>
-			<blockquote class="quote-externo">
+			<h1 data-anime="500" class="fadeDown">Bicicletas Feitas a Mão</h1>
+			<blockquote data-anime="800" class="fadeDown quote-externo">
 				<!-- bloco para citações -->
 				<p>"não tem nada em sua casa que você não considere útul ou acredita ser bonito"</p>
 				<cite>WILLIAM MORRIS</cite>
 			</blockquote>
-			<a href="produtos.html" class="btn">Orçamento</a>
+			<a data-anime="1200" href="produtos.html" class="btn">Orçamento</a>
 		</div>
 
 	</section>
 
 	<!-- produtos -->
-	<section class="produtos container">
+	<section data-anime="1600" class="fadeDown produtos container">
 		<h2 class="subtitulo">Produtos</h2>
 		<ul class="produtos_lista">
 
@@ -195,6 +196,9 @@
 		</div>
 
 	</footer>
+
+	<script src="./js/simple-anime.js"></script>
+	<script src="./js/script.js"></script>
 
 </body>
 
